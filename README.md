@@ -6,7 +6,8 @@ This project demonstrates automated UI testing for Twitch.tv using Selenium WebD
 
 1. Clone the repository:
 ```
-bash git clone [https://github.com/gabdulmaksut/python-pytest-selenium](https://github.com/gabdulmaksut/python-pytest-selenium) cd python-pytest-selenium
+bash git clone https://github.com/gabdulmaksut/python-pytest-selenium
+cd python-pytest-selenium
 ``` 
 
 2. Create and activate a virtual environment:
