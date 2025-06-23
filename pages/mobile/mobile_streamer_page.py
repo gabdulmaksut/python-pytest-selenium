@@ -12,6 +12,7 @@ class MobileStreamerPage(BasePage):
     MAIN_CONTENT = (By.ID, "page-main-content-wrapper")
     LOADER = (By.CLASS_NAME, "tw-loading-spinner")
     MODAL_CLOSE_BUTTON = (By.CSS_SELECTOR, ".modal-close-button")
+    PAGE_CONTENT = (By.TAG_NAME, "article")
 
     @allure_step("Wait for streamer page to fully load")
     def wait_for_page_load(self):
@@ -61,3 +62,14 @@ class MobileStreamerPage(BasePage):
         except Exception as e:
             print(f"Failed to take screenshot: {e}")
             return None
+
+    @allure_step("Check if page content is fully loaded")
+    def is_page_fully_loaded(self):
+        """
+        Checks if the page is fully loaded by verifying the presence of article elements
+        in the DOM, which indicates that the main content has been successfully loaded.
+
+        Returns:
+            bool: True if the page is fully loaded (article elements are present), False otherwise
+        """
+        return self.is_element_present(self.PAGE_CONTENT)

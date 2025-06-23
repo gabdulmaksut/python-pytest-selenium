@@ -26,7 +26,7 @@ class MobileSearchResultsPage(BasePage):
         last_height = self.get_page_height()
 
         while scroll_count < max_scrolls:
-            self.scroll_page(900)
+            self.scroll_page(2000)
             time.sleep(1)  # Short pause to allow content to load
             new_height = self.get_page_height()
             if new_height == last_height:

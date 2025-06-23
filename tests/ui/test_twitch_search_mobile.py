@@ -28,3 +28,4 @@ class TestMobileTwitchSearch:
         streamer_page.take_screenshot()
 
         # Assertion
+        assert streamer_page.is_page_fully_loaded(), "Page did not load completely"
