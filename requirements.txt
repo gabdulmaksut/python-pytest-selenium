@@ -1,0 +1,7 @@
+selenium==4.17.2
+pytest==8.0.0
+webdriver-manager==4.0.1
+pytest-html==4.1.1
+allure-pytest==2.13.2
+pytest-xdist==3.5.0  # For parallel test execution
+python-dotenv==1.0.0
